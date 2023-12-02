@@ -1,4 +1,5 @@
 <?php
+
 $time_start = microtime(true); // для вычеслений, внимание - не менять эту строку!
 // функция время выполнения скрипта в начале, обязательно microtime(true), типа так: $time_start = microtime(true);
 

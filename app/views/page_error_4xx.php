@@ -1,6 +1,6 @@
 <?php
 
-namespace mvc;
+namespace Workiru\mvc;
 
 class page_error_4xx {
 

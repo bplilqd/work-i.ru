@@ -1,6 +1,6 @@
 <?php
 
-namespace mvc;
+namespace Workiru\mvc;
 
 class app_url_controll {
 

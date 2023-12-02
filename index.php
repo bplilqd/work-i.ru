@@ -3,21 +3,21 @@
 require __DIR__ . '/app/function.php';
 
 // обязательный контроллер app_url_controll
-$app = new mvc\app(['app_url_controll'], __DIR__);
+$app_url_controll = new Workiru\mvc\app(['app_url_controll'], __DIR__);
 
 
 //список разрешенныых виртуальных файлов
 //список разрешенных виртуальных директорий
-print_r($app->name);
-print_r($app->controllers['app_url_controll']->name);
-if ($app->error_page_print) {
-    echo $app->error_page_print;
+print_r($app_url_controll->name);
+print_r($app_url_controll->controllers['app_url_controll']->name);
+if ($app_url_controll->error_page_print) {
+    echo $app_url_controll->error_page_print;
     exit();
 }
 
 
 
-print_r($app->controllers['url_error_controll']->error_num_and_comment);
+print_r($app_url_controll->controllers['url_error_controll']->error_num_and_comment);
 //echo $app->models['error_url_mod']->in_err_num();
 //foreach ($app->controllers['app_url_controll']->dir_url as $val) {
 //    echo ' ' . urldecode($val);

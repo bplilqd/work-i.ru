@@ -1,6 +1,6 @@
 <?php
 
-namespace mvc;
+namespace Workiru\mvc;
 
 class error_url_mod {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace mvc;
+namespace Workiru\mvc;
 
 class app {
 
@@ -17,7 +17,6 @@ class app {
         $this->new_object_controllers($arr_class);
         $this->chek_url_set_error();
         $this->error_page_verification();
-        
     }
 
     // установка объектов и путей к ним для controllers
@@ -27,7 +26,7 @@ class app {
             // проверяем был ли установлен объект ранее
             if (!$this->controllers[$val] && in_array($val, $arr_class)) {
                 require __DIR__ . '/' . $val . '.php';
-                $str_new = 'mvc\\'.$val;
+                $str_new = 'Workiru\mvc\\'.$val;
                 $this->controllers[$val] = new $str_new;
             }
         }
@@ -39,7 +38,7 @@ class app {
         $this->name[] = __METHOD__;
         if (!$this->models[$class]) {
             require $this->dir . '/app/models/' . $class . '.php';
-            $str_new = 'mvc\\'.$class;
+            $str_new = 'Workiru\mvc\\'.$class;
             $this->models[$class] = new $str_new($param);
         }
     }
@@ -48,7 +47,7 @@ class app {
         $this->name[] = __METHOD__;
         if (!$this->views[$class]) {
             require $this->dir . '/app/views/' . $class . '.php';
-            $str_new = 'mvc\\'.$class;
+            $str_new = 'Workiru\mvc\\'.$class;
             $this->views[$class] = new $str_new($param);
         }
     }
