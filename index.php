@@ -6,8 +6,10 @@ require __DIR__ . '/app/function.php';
 $app_url_controll = new Workiru\mvc\app(['app_url_controll'], __DIR__);
 
 
-//список разрешенныых виртуальных файлов
+//список разрешенных виртуальных файлов
+// ....
 //список разрешенных виртуальных директорий
+// все директории
 print_r($app_url_controll->name);
 print_r($app_url_controll->controllers['app_url_controll']->name);
 if ($app_url_controll->error_page_print) {
