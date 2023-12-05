@@ -2,7 +2,7 @@
 
 require __DIR__ . '/app/function.php';
 
-// обязательный app_url_controll
+// обязательный объектЧЧ app_url_controll
 $app_url_controll = new Workiru\mvc\app(['app_url_controll'], __DIR__);
 
 
